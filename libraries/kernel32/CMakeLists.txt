@@ -31,6 +31,7 @@ project(kernel32
 )
 
 set(KERNEL32_SOURCES
+    errhandlingapi.cpp errhandlingapi.h
     profileapi.cpp profileapi.h
 )
 
