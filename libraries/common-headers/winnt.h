@@ -33,6 +33,8 @@
 
 typedef long LONG;
 typedef long long LONGLONG;
+typedef const char* LPCSTR;
+typedef const wchar_t* LPCWSTR;
 
 union LARGE_INTEGER {
     struct {
