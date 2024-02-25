@@ -26,28 +26,27 @@
  * SOFTWARE.
 */
 
-#ifndef WINDEF_H
-#define WINDEF_H
+#ifndef BASETSD_H
+#define BASETSD_H
 
-#include "winnt.h"
+typedef signed int INT32;
+typedef signed long long INT64;
+typedef unsigned int UINT32;
+typedef unsigned long long UINT64;
 
-#define FALSE 0
-#define TRUE 1
+#ifndef __i386__
+    typedef long long INT_PTR;
+    typedef long long LONG_PTR;
+    typedef unsigned long long UINT_PTR;
+    typedef unsigned long long ULONG_PTR;
+#else
+    typedef int INT_PTR;
+    typedef long LONG_PTR;
+    typedef unsigned int UINT_PTR;
+    typedef unsigned long ULONG_PTR;
+#endif
 
-typedef int BOOL;
-typedef unsigned char BYTE;
-typedef unsigned long ULONG;
-typedef unsigned long long ULONGLONG;
-typedef unsigned short WORD;
+typedef ULONG_PTR DWORD_PTR;
 
-struct RECT {
-    LONG left;
-    LONG top;
-    LONG right;
-    LONG bottom;
-};
-
-typedef RECT* LPRECT;
-typedef RECT* PRECT;
 
 #endif

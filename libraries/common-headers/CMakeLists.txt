@@ -31,6 +31,7 @@ project(common-headers
 )
 
 add_library(common-headers INTERFACE
+    basetsd.h
     intsafe.h
     windef.h
     winnt.h
