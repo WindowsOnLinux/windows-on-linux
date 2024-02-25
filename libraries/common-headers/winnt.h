@@ -31,10 +31,18 @@
 
 #include "intsafe.h"
 
+typedef char CHAR;
 typedef long LONG;
 typedef long long LONGLONG;
+typedef const char* PCSTR;
+typedef const wchar_t* PCWSTR;
+typedef char* PSTR;
+typedef wchar_t* PWSTR;
 typedef const char* LPCSTR;
 typedef const wchar_t* LPCWSTR;
+typedef char* LPSTR;
+typedef wchar_t* LPWSTR;
+typedef wchar_t WCHAR;
 
 union LARGE_INTEGER {
     struct {
